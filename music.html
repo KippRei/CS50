@@ -1,0 +1,24 @@
+{% block bgURL %}<style>body {background-image: url("/static/MilkyWay.jpg");}</style>{% endblock %}
+{% block main %}
+<div class="clear goMusic">
+    <h1 class="contentText">Music</h1>
+    <p class="contentText">Magical Man</p>
+    <audio controls>
+        <source src="/static/magicalman.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div>
+        <iframe class="col vid" src="https://www.youtube.com/embed/02_n33eszgI?rel=0&amp;wmode=transparent&amp;enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+    </div>
+    <row>
+        <div>
+            <iframe class="column itemOne vid2" src="https://www.youtube.com/embed/u7nLb38Tlqk?rel=0&amp;wmode=transparent&amp;enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+            <iframe class="column itemTwo vid2" src="https://www.youtube.com/embed/s0aCHU8dlKs?rel=0&amp;wmode=transparent&amp;enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+    </row>
+</div>
+
+
+        <!--To create space for audio player docked at bottom of screen-->
+        <div class="bottomBuf"></div>
+{% endblock %}
