@@ -1,0 +1,54 @@
+TODO:
+
+-attach menu list to menu button
+-fix resizing issues on mobile
+-add tracklist to Music tab that plays music on docked audio player
+-need to create donation shop for individual songs
+-home page blog
+-mailchimp
+-social media icons
+
+
+/// For album animation on hover ///
+
+<div class="albumContainer">
+                <img id="albumFore" alt="Tommy Spase and The Alchemists" src="/static/albumFore.png">
+                <img id="albumBack" alt="Tommy Spase and The Alchemists" src="/static/albumBack.jpg">
+            </div>
+
+            <div>
+                <div class="column chgPoint logoContainer"><img id="logo" alt="Tommy Spase and The Alchemists" src="/static/cccover.jpg"></div>
+            </div>
+
+            .albumContainer {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+}
+
+#albumBack {
+    padding-top: 34px;
+    padding-left: 148px;
+    width: 457px;
+    height: auto;
+}
+
+#albumFore {
+    padding-bottom: 150px;
+    position: absolute;
+    width: 201%;
+    height: auto;
+    transform: rotateY(0deg);
+    transition: width 2s, height 3s, transform 2s;
+}
+
+#albumFore:hover {
+    transform: rotateY(10deg);
+    width: 206%;
+
+}
+/////////////////////////////////////////////
+
+amazingaudio.js
+
+line 86: {instance.elemLength=3;instance.elemArray.length=3} ---> sets max array length for player
