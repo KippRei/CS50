@@ -1,0 +1,69 @@
+{% block bgURL %}<style>body {background-image: url("/static/MilkyWay.jpg");}</style>{% endblock %}
+{% block main %}
+<div class="contentBGFadeIn">
+        <div class="fillerForBGFadeIn"></div>
+        <div class="fillerForBGFadeIn"></div>
+        <div class="fillerForBGFadeIn"></div>
+        <div class="fillerForBGFadeIn"></div>
+</div>
+<div class="contentBG">
+    <div class="row p-1">
+        <div class="col-2">
+            <img class="thumbnail chgPoint CCAlbum" src="/static/cccover.jpg">
+        </div>
+        <div class="col-7">
+            <input type="button" class="songButton chgPoint contentText" id="song" value="Toy Opus" onclick="PlaySong(0)">
+        </div>
+        <div class="col-3">
+            <input type="button" class="donateButton chgPoint contentText" value="Name Your Price">
+        </div>
+    </div>
+
+    <div class="row p-1">
+        <div class="col-2">
+            <img class="thumbnail chgPoint AlchAlbum" src="/static/alchcover.jpg">
+        </div>
+        <div class="col-7">
+            <div><input type="button" class="songButton chgPoint contentText" id="song" value="Story Book" onclick="PlaySong(1)"></div>
+        </div>
+        <div class="col-3">
+            <input type="button" class="donateButton chgPoint contentText" value="Name Your Price">
+        </div>
+    </div>
+
+    <div class="row p-1">
+        <div class="col-2">
+            <img class="thumbnail chgPoint CCAlbum" src="/static/cccover.jpg">
+        </div>
+        <div class="col-7">
+            <input type="button" class="songButton chgPoint contentText" id="song" value="Magical Man" onclick="PlaySong(2)">
+        </div>
+        <div class="col-3">
+            <input type="button" class="donateButton chgPoint contentText" value="Name Your Price">
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="albumPopup" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="">Purchase This Album</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="albumPopupBody">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>MusicPage()</script>
+{% endblock %}

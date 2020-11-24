@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- stylesheets -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <!--<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">-->
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+        <!-- ajax jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+        <title>Tommy Spase and the Alchemists</title>
+        <link href="/static/favicon.ico" rel="icon">
+
+        <!-- Audio Player -->
+        <script src="/static/audioplayerengine/jquery.js"></script>
+        <script src="/static/audioplayerengine/amazingaudioplayer.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/audioplayerengine/initaudioplayer-1.css">
+        <script src="/static/audioplayerengine/initaudioplayer-1.js"></script>
+        <!-- End of Audio Player -->
+
+        {% block bgURL %}{% endblock %}
+
+
+
+        <!-- Bootstrap -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body id="bg">
+
+        <div id="amazingaudioplayer-1" style="z-index:1030;display:block;position:fixed;bottom:0;width:100%;height:auto;margin:0px auto 0px;">
+            <ul class="amazingaudioplayer-audios" style="display:none;">
+                <li data-artist="Tommy SpaSe and The Alchemists" data-title="Toy Opus" data-album="" data-info="" data-image="" data-duration="743">
+                    <div class="amazingaudioplayer-source" data-src="/static/audios/ToyOpus_NewIntroACousticDemo.mp3" data-type="audio/mpeg" ></div>
+                </li>
+                <li data-artist="Tommy SpaSe And The Alchemists" data-title="Story Book" data-album="" data-info="" data-image="" data-duration="214">
+                    <div class="amazingaudioplayer-source" data-src="/static/audios/tommy-spase-and-the-alchemists_storybook.mp3" data-type="audio/mpeg" ></div>
+                </li>
+                <li data-artist="Tommy SpaSe and The Alchemists" data-title="Magical Man" data-album="" data-info="" data-image="" data-duration="0">
+                    <div class="amazingaudioplayer-source" data-src="/static/audios/magicalman.mp3" data-type="audio/mpeg" ></div>
+                </li>
+                <li data-artist="Tommy SpaSe and The Alchemists" data-title="Penny Arcade" data-album="" data-info="" data-image="" data-duration="743">
+                    <div class="amazingaudioplayer-source" data-src="/static/audios/pennyarcade.mp3" data-type="audio/mpeg" ></div>
+                </li>
+            </ul>
+            <div class="amazingaudioplayer-engine"><a href="http://amazingaudioplayer.com" title="html5 mp3 player">music player for website</a></div>
+        </div>
+
+        <!-- <div id="animate"></div>-->
+        <div id="menuLoc">
+            <nav id="menuList" class="row">
+                <div class="col-1"></div>
+                <input type="button" value="Home" class="menuButton menuItem chgPoint col-1" id="home" onclick="LoadURL('/home')">
+                <input type="button" value="About" class="menuButton menuItem chgPoint col-1" id="about" onclick="LoadURL('/about')">
+                <input type="button" value="Music" class="menuButton menuItem chgPoint col-1" id="music" onclick="LoadURL('/music')">
+                <input type="button" value="Videos" class="menuButton menuItem chgPoint col-1" id="videos" onclick="LoadURL('/videos')">
+                <input type="button" value="Shop" class="menuButton menuItem chgPoint col-1" id="store" onclick="LoadURL('/store')">
+                <input type="button" value="Contact" class="menuButton menuItem chgPoint col-1" id="contact" onclick="LoadURL('/contact')">
+                <div class="col-2"></div>
+            </nav>
+        </div>
+
+        <div id="menu">
+            <div id="menuIconAnimation"><button class="chgPoint menuButton" id="menuIcon"><img id="menuImg" alt="Menu Button" src="/static/menu.png"></button></div>
+        </div>
+
+        <div class="chgPoint logoContainer"><img id="logo" alt="Tommy Spase and The Alchemists" src="/static/TSATSLOGO.png"></div>
+
+        <div class="float-sm-right p-2" id="sfxSwitch"><input type="button" class="chgPoint" id="sfxToggle" value="Sound FX: " onclick="SFXToggle()"><span id="sfxToggleText">On</span></div>
+
+        <main class="container" onload="CloseMenu()">
+            {% block main %}{% endblock %}
+        </main>
+
+    </body>
+
+    <script src="/static/js.js"></script>
+
+</html>

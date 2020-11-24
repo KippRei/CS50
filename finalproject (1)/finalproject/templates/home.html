@@ -1,0 +1,68 @@
+{% block bgURL %}<style>body {background-image: url("/static/cabstage.jpg");}</style>{% endblock %}
+
+{% block main %}
+<div class="contentBGFadeIn">
+        <div class="fillerForBGFadeIn"></div>
+        <div class="fillerForBGFadeIn"></div>
+        <div class="fillerForBGFadeIn"></div>
+        <div class="fillerForBGFadeIn"></div>
+    </div>
+<div class="contentBG">
+    <p class="contentText"> Homepage text... </p>
+
+    <!-- Begin Mailchimp Signup Form -->
+    <div class="row">
+        <div class="col-6">
+            <input type="text" id="username" placeholder="Please Enter Your Name">
+            <input type="text" id="comment" placeholder="Comment">
+            <p><input type="button" value="Submit" onclick="LoadURL('/home', 'true')"></p>
+        </div>
+        <div class="col-6">
+            <div class="center"><label for="mc_embed_signup" class="contentText"><h2>Join Our Mailing List!!</h2></label></div>
+            <div id="mc_embed_signup">
+                <form action="https://tommyspase.us12.list-manage.com/subscribe/post?u=6433cdba2f8aa975ea07917c6&amp;id=5ce25205b3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                    	<!--h2>Subscribe to our mailing list</h2>-->
+                        <div class="indicates-required">
+                            <span class="asterisk">*</span> indicates required
+                        </div>
+                        <div class="mc-field-group">
+                        	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
+                        	<input type="email" onfocus="Scribble()" onfocusout="NoScribble()" value="" name="EMAIL" class="required email mcField typewriter" id="mce-EMAIL">
+                        </div>
+                        <div class="mc-field-group">
+                        	<label for="mce-FNAME">First Name </label>
+                        	<input type="text" onfocus="Scribble()" onfocusout="NoScribble()" value="" name="FNAME" class="mcField typewriter" id="mce-FNAME">
+                        </div>
+                        <div class="mc-field-group">
+                        	<label for="mce-LNAME">Last Name </label>
+                        	<input type="text" onfocus="Scribble()" onfocusout="NoScribble()" value="" name="LNAME" class="mcField typewriter" id="mce-LNAME">
+                        </div>
+                    	<div id="mce-responses" class="clear">
+                    		<div class="response" id="mce-error-response" style="display:none"></div>
+                    		<div class="response" id="mce-success-response" style="display:none"></div>
+                    	</div>
+                    	<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6433cdba2f8aa975ea07917c6_5ce25205b3" tabindex="-1" value=""></div>
+
+                        <div class="clear subBut"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button submitBut"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--End mc_embed_signup-->
+    <div class="container">
+        <div class="row">
+            <div class="col-6 contentText">
+                {% for row in comments %}
+                <div>{{ row['comment'] }}</div>
+                <div>-{{ row['name'] }}</div>
+                            {% endfor %}
+            </div>
+            <div class="col-6"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
